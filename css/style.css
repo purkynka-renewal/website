@@ -1,0 +1,59 @@
+:root{
+  --contentBlue: #00123E;
+  --easyWhite: #EFEFEF;
+  --lightBlue: #18479B;
+  --linkBlue: #00B1FF;
+  --darkBlue: #09152D;
+  --tableBlue: #001C60;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: RobotoMedium;
+  src: url(/fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: RobotoLight;
+  src: url(/fonts/Roboto-Light.ttf);
+}
+
+*{
+  font-family: Roboto, Helvetica, Arial, Sans-serif;
+}
+
+header{
+  background-color: var(--darkBlue);
+  color: var(--easyWhite);
+  padding: 20px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 5%;
+}
+
+
+/*Header Info*/
+#header-info{
+  display: flex;
+}
+#header-info p{
+  margin: auto 0 auto 18.8px;
+  font-size: 32px;
+}
+#header-logo{
+  height: 48px;
+  width: 56.2px;
+}
+
+/*Main Header Info*/
+#mainheader-info{
+  display: flex;
+  margin: auto;
+}
+#mainheader-info p{
+  margin: auto 22px;
+}
