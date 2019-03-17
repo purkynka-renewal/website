@@ -2,6 +2,7 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>SSP Brno</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -10,45 +11,56 @@
   <body>
     <div>
       <header>
-        <div id="header-info">
-          <img src="img/spseit_sbw.png" id="header-logo">
-          <p>SPŠ Brno, Purkyňova, p. o.</p>
-        </div>
-        <div id="mainheader-info">
-          <p>28. února 2019</p>
-          <p>Svátek má Lumír</p>
-          <p>Týden A</p>
-        </div>
         <nav>
-          <a href=""><i class="fas fa-user-graduate"></i>Obory</a>
-          <a href=""><i class="far fa-newspaper"></i>Články</a>
-          <a href=""><i class="fas fa-file-alt"></i>Dokumenty</a>
-          <a href=""><i class="fas fa-map-marker-alt"></i><i class="fas fa-phone"></i>Kontakty</a>
+          <div id="nameLogo">
+            <img src="img/spseit_sbw.png" id="main-logo">
+            <p id="main-name">SPŠ Brno, Purkyňova, p. o.</p>
+          </div>
+          <div id="mainInfo">
+            <p class="mainInfo-item">28. února 2019</p>
+            <p class="mainInfo-item" id="mainInfo-centerItem">Svátek má Lumír</p>
+            <p class="mainInfo-item">Týden A</p>
+          </div>
+          <div id="headerMenu">
+            <a href="" class="headerMenu-item"><i class="fas fa-user-graduate headerMenu-icon"></i>Obory</a>
+            <a href="" class="headerMenu-item"><i class="far fa-newspaper headerMenu-icon"></i>Články</a>
+            <a href="" class="headerMenu-item"><i class="fas fa-file-alt headerMenu-icon"></i>Dokumenty</a>
+            <a href="" class="headerMenu-item"><div class="contact-icons"><i class="fas fa-map-marker-alt"></i><i class="fas fa-phone"></i></div>Kontakty</a>
+          </div>
         </nav>
+        <div id="mainHeadline">
+          <div id="mainHeadline-text">
+            <h1>Střední průmyslová škola Brno, Purkyňova</h1>
+            <p id="mainHeadline-address">Purkyňova 97, 612 00 Brno</p>
+          </div>
+          <img id="mainHeadline-logo" src="img/spseit.png">
+        </div>
+        <div id="bottomHeader-content">
+          <div id="grants">
+            <img src="img/logo-euvvv.png" id="logoEU">
+            <img src="img/logo-msmt.png" id="logoMSMT">
+            <img src="img/logo-jmk.png" id="logoJMK">
+          </div>
+          <div id="social-media">
+            <a id="fb-logo" href=""><i class="fab fa-facebook-square"></i></a>
+            <a id="tw-logo" href=""><i class="fab fa-twitter-square"></i></a>
+            <a id="gp-logo" href=""><i class="fab fa-google-plus-square"></i></a>
+          </div>
+        </div>
+        <img src="img/bg.jpg" id="background">
       </header>
-      <h1>Střední průmyslová škola Brno, Purkyňova</h1>
-      <p>Purkyňova 97, 612 00 Brno</p>
-      <img src="">
-      <div>
-        <img src="">
-        <img src="">
-        <img src="">
-      </div>
-      <div>
-        <a href=""><i class="fab fa-facebook-square"></i></a>
-        <a href=""><i class="fab fa-twitter-square"></i></a>
-        <a href=""><i class="fab fa-google-plus-square"></i></a>
-      </div>
-      <div>
-        <a href=""><i class="fas fa-user-graduate"></i>Obory</a>
-        <a href=""><i class="fas fa-graduation-cap"></i>Edupage</a>
-        <a href=""><i class="fas fa-utensils"></i>Obědy</a>
-        <a href=""><i class="fas fa-envelope"></i>Mail</a>
-        <a href=""><i class="fas fa-cloud"></i>Cloud</a>
-        <a href=""><i class="fas fa-clock"></i>Rozvrhy</a>
-        <a href=""><i class="fas fa-atlas"></i>Moodle</a>
-        <a href=""><i class="far fa-newspaper"></i>Články</a>
-        <a href=""><i class="fas fa-map-marker-alt"></i><i class="fas fa-phone"></i>Kontakty</a>
+      <div class="menus">
+        <div id="majorMenu">
+          <a href="" class="majorMenu-item"><i class="fas fa-user-graduate majorMenu-icon" id="majorMenu-coursesIcon"></i><p class="majorMenu-link">Obory</p></a>
+          <a href="" class="majorMenu-item"><i class="fas fa-graduation-cap majorMenu-icon" id="majorMenu-edupageIcon"></i><p class="majorMenu-link">Edupage</p></a>
+          <a href="" class="majorMenu-item"><i class="fas fa-utensils majorMenu-icon" id="majorMenu-lunchIcon"></i><p class="majorMenu-link">Obědy</p></a>
+          <a href="" class="majorMenu-item"><i class="fas fa-envelope majorMenu-icon" id="majorMenu-mailIcon"></i><p class="majorMenu-link">Mail</p></a>
+          <a href="" class="majorMenu-item"><i class="fas fa-cloud majorMenu-icon" id="majorMenu-cloudIcon"></i><p class="majorMenu-link">Cloud</p></a>
+          <a href="" class="majorMenu-item"><i class="fas fa-clock majorMenu-icon" id="majorMenu-scheludeIcon"></i><p class="majorMenu-link">Rozvrhy</p></a>
+          <a href="" class="majorMenu-item"><i class="fas fa-atlas majorMenu-icon" id="majorMenu-moodleIcon"></i><p class="majorMenu-link">Moodle</p></a>
+          <a href="" class="majorMenu-item"><i class="far fa-newspaper majorMenu-icon" id="majorMenu-blogIcon"></i><p class="majorMenu-link">Články</p></a>
+          <a href="" class="majorMenu-item"><div class="majorMenu-contactIcons"><i class="fas fa-map-marker-alt" id="majorMenu-addressIcon"></i><i class="fas fa-phone" id="majorMenu-phoneIcon"></i></div><p class="majorMenu-link">Kontakty</p></a>
+        </div>
       </div>
       <div>
           <p>Škola<i class="fas fa-caret-down"></i></p>
