@@ -164,6 +164,7 @@ h1{
   margin-left: 40px;
 }
 #social-media{
+  position: relative;
   display: flex;
   flex-direction: row;
   margin: auto;
@@ -310,7 +311,8 @@ h1{
 }
 #page-content{
   background: var(--darkBlue);
-  padding: 50px 100px;
+  display: flex;
+  flex-direction: column;
 }
 .partHeadline{
   margin: auto;
@@ -321,13 +323,18 @@ h1{
   width: 100%;
   border-bottom: 5px solid var(--easyWhite);
 }
+#coursesGraduation-container{
+  max-width: 1700px;
+  min-width: 280px;
+  margin: 25px auto;
+}
 #courses-graduation{
  background-color: var(--contentBlue);
  display: flex;
  flex-direction: row;
  flex-wrap: wrap;
  justify-content: center;
- margin: 15px auto;
+ margin: 10px auto;
  padding: 0 10px;
 }
 .course-info{
@@ -402,6 +409,66 @@ h1{
 }
 #course-PE:hover{
   background-color: #347513;
+}
+#coursesLearning-container{
+  max-width: 580px;
+  min-width: 280px;
+  margin: 10px auto;
+}
+#courses-learning{
+  background-color: var(--contentBlue);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px auto;
+  padding: 0 10px;
+}
+#course-El{
+  background-color: #C99810;
+}
+#course-El:hover{
+  background-color: #B0891D;
+}
+#course-M{
+  background-color: #000000;
+}
+#course-M:hover{
+  background-color: #080808;
+}
+#examsInfo-container{
+  max-width: 1080px;
+  margin: auto;
+  padding: 0 10px;
+}
+#exams-info{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--contentBlue);
+  padding: 25px 20px;
+  margin: 15px auto;
+  min-height: 250px;
+}
+.exams-article{
+  max-width: 450px;
+  margin: 0 30px;
+  font-family: Roboto;
+  font-size: 20px;
+  color: var(--easyWhite);
+}
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1700px;
+  margin: auto;
+}
+.weblink{
+  color: var(--linkBlue);
+  text-decoration: underline;
 }
 #background{
   z-index: -1;
