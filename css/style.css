@@ -413,7 +413,7 @@ h1{
 #coursesLearning-container{
   max-width: 580px;
   min-width: 280px;
-  margin: 10px auto;
+  margin: 10px auto 10px 0;
 }
 #courses-learning{
   background-color: var(--contentBlue);
@@ -438,8 +438,7 @@ h1{
 }
 #examsInfo-container{
   max-width: 1080px;
-  margin: auto;
-  padding: 0 10px;
+  margin: 10px 0 10px auto;
 }
 #exams-info{
   display: flex;
@@ -463,12 +462,126 @@ h1{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 1700px;
+  min-width: 1700px;
   margin: auto;
 }
 .weblink{
   color: var(--linkBlue);
   text-decoration: underline;
+}
+.article-picture{
+  width: 240px;
+  height: 160px;
+  margin: auto;
+  border: 2px solid var(--easyWhite);
+}
+.article-defaultImage{
+  width: 141px;
+  height: 120px;
+  margin: auto 50px;
+}
+article{
+  background-color: var(--contentBlue);
+  margin: 15px auto;
+  padding: 30px 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#articles-container{
+  max-width: 1200px;
+  margin: auto;
+  margin-left: 0;
+}
+.article-content{
+  color: var(--easyWhite);
+  margin-left: 30px;
+}
+.article-head{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid var(--easyWhite);
+}
+.article-headline{
+  font-family: RobotoMedium;
+  font-size: 24px;
+  margin: auto;
+  margin-left: 0;
+}
+.article-date{
+  font-family: Roboto;
+  font-size: 18px;
+  margin: auto;
+  margin-right: 0;
+}
+.article-text{
+  font-family: Roboto;
+  font-size: 18px;
+  max-width: 800px;
+}
+.article-readMore{
+  color: var(--linkBlue);
+  text-decoration: underline;
+}
+#competitions-container{
+  max-width: 400px;
+  margin: 10px 0 10px auto;
+}
+#competitions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--contentBlue);
+  padding: 30px;
+  margin: 15px auto;
+}
+.competitions-text{
+  color: var(--easyWhite);
+  font-family: Roboto;
+  font-size: 20px;
+  margin: 30px auto;
+}
+.competitions-line{
+  width: 340px;
+  color: var(--easyWhite);
+  opacity: .25;
+}
+#schoolProjects-container{
+  max-width: 1700px;
+  margin: 10px auto 35px auto;
+}
+#school-projects{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--contentBlue);
+  padding: 35px 40px;
+  margin: 15px auto;
+}
+#erasmus-logo{
+  width: 250px;
+  height: 71.58px;
+  margin: 29px 25px;
+}
+#ropjv-logo{
+  width: 300px;
+  height: 121.12px;
+  margin: auto 25px;
+}
+#cez-logo{
+  width: 309px;
+  height: 130.11px;
+  margin: auto 25px;
+}
+#cr-logo{
+  width: 238px;
+  height: 55px;
+  margin: 38px 25px;
+}
+#etwinning-logo{
+  width: 323px;
+  height: 98px;
+  margin: 16px 25px;
 }
 #background{
   z-index: -1;
