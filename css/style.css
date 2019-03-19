@@ -1,6 +1,7 @@
 :root{
   --contentBlue: #00123E;
   --easyWhite: #EFEFEF;
+  --grayish: #babdb6;
   --lightBlue: #18479B;
   --linkBlue: #00B1FF;
   --darkBlue: #09152D;
@@ -8,92 +9,145 @@
   --facebook: #EFEFEF;
   --twitter: #1DA1F2;
   --googleplus: #DD4B39;
+  /* Purkynka color scheme */
+  --pred: #eb1b25;
+  --pgreen: #14a25f;
+  --pblue: #18479b;
 }
+
 @font-face {
   font-family: Roboto;
-  src: url(../fonts/Roboto-Regular.ttf);
+  font-weight: 200;
+  font-style: normal;
+  src: url(../webfonts/Roboto-Thin.ttf);
 }
 
 @font-face {
-  font-family: RobotoMedium;
-  src: url(../fonts/Roboto-Medium.ttf);
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  src: url(../webfonts/Roboto-Regular.ttf);
 }
 
 @font-face {
-  font-family: RobotoLight;
-  src: url(../fonts/Roboto-Light.ttf);
+  font-family: Roboto;
+  font-weight: 700;
+  font-style: normal;
+  src: url(../webfonts/Roboto-Medium.ttf);
 }
 
 @font-face {
-  font-family: RobotoBold;
-  src: url(../fonts/Roboto-Bold.ttf);
+  font-family: Roboto;
+  font-weight: 900;
+  font-style: normal;
+  src: url(../webfonts/Roboto-Bold.ttf);
 }
+
+
 *{
-  scroll-behavior: smooth;
-}
-header{
-  display: flex;
-  flex-direction: column;
-  min-height: 42.5vw;
-}
-nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 20px 25px;
-  padding-bottom: 0;
-}
-#nameLogo{
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  margin-left: 0;
-}
-#main-name{
-  color: var(--easyWhite);
-  font-family: RobotoMedium;
-  font-size: 32px;
-  margin: auto 0;
-  margin-left: 19.5px;
-}
-#main-logo{
+  font-family: Roboto, Helvetica, Arial, Sans-serif;
+  box-sizing: border-box;
   margin: 0;
-  width: 56.2px;
-  height: 48px;
+  padding: 0;
 }
-#mainInfo{
+
+/****************/
+
+body{
+  scroll-behavior: smooth;    
+  font-family: Roboto, Helvetica, Arial, Sans-serif;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.dropdown-toggle::after{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0d7"; margin-left: 0.5em;
+}
+
+/****************/
+header#header{
+  width: 100%;
+  padding-top: 80px;
+  min-height: 100vh;
+  position: relative;
   display: flex;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.mainInfo-item{
-  font-family: RobotoMedium;
-  font-size: 24px;
+
+/****************/
+#mainInfo{
+  margin-top: -18px;
+  font-weight: 400;
+  font-size: 16px;
   color: var(--easyWhite);
+}
+#mainInfo span{
   padding-left: 20px;
   padding-right: 20px;
 }
-#mainInfo-centerItem{
-  border-right: 3px solid var(--easyWhite);
-  border-left: 3px solid var(--easyWhite);
+
+#mainInfo span:nth-child(2){
+  border-right: 1px solid var(--easyWhite);
+  border-left: 1px solid var(--easyWhite);
 }
-#headerMenu{
+
+/****************/
+nav#mainnav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  min-height: 80px;
   display: flex;
-  margin: auto;
-  margin-right: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
-.headerMenu-item{
+
+#nav-brand{
+  padding: 16px;
   display: flex;
-  margin: auto 15.7px;
-  font-size: 24px;
-  font-family: RobotoMedium;
+  align-items: center;
   color: var(--easyWhite);
+  font-weight: 400;
+  font-size: 32px;
+}
+#main-logo{
+  margin: 0;
+  margin-right: 18px;
+  width: auto;
+  height: 48px;
+}
+
+nav#mainnav .nav{
+  display: flex;
+  list-style-type: none;
+}
+nav#mainnav .nav > li > a{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--grayish);
+  transition: color .25s;
   text-decoration: none;
 }
-.headerMenu-icon{
+
+nav#mainnav .nav .fas, nav#mainnav .nav .far, .contact-icons *{
   font-size: 20px;
-  margin: auto;
-  margin-right: 5.5px;
+  margin-right: 6px;
 }
+
+nav#mainnav .nav > li > a:hover{
+  color: white;
+}
+
+/****************/
 .contact-icons{
   display: flex;
   flex-wrap: nowrap;
@@ -101,20 +155,33 @@ nav{
   font-size: 15px;
 }
 .contact-icons .fa-map-marker-alt{
-  margin-top: 2px;
+  margin: 2px -10px 0 0;
 }
 .contact-icons .fa-phone{
-  margin-top: 10px;
+  margin: 10px 0 0 -10px;
 }
+
+/****************/
 #mainHeadline{
   display: flex;
   margin: auto;
   justify-content: center;
 }
+
+#headline-background{
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 #mainHeadline-text{
   color: var(--easyWhite);
   text-align: right;
-  font-family: RobotoMedium;
+  font-family: Roboto;
+  font-weight: 400;
   margin: auto;
   margin-right: 60px;
 }
@@ -123,52 +190,43 @@ h1{
   max-width: 40vw;
   margin: 0;
 }
-#mainHeadline-address{
+#mainHeadline p{
   font-size: 18px;
   margin-top: 20px;
   margin-bottom: 0;
   max-width: 40vw;
 }
 #mainHeadline-logo{
-  width: 309.2px;
+  width: auto;
   height: 264px;
-  margin: auto;
-  margin-left: 0;
 }
+
+/****************/
 #bottomHeader-content{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 0 50px;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #000;
+  border-bottom: 2px solid var(--easyWhite);
 }
 #grants{
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin: 0;
+  align-items: center;
 }
-#logoEU{
-  width: 459px;
-  height: 121px;
+#grants *{
+  width: auto;
+  height: 120px;
+  margin: 4px 8px;
 }
-#logoMSMT{
-  width: 132px;
-  height: 63px;
-  margin: auto;
-}
-#logoJMK{
-  width: 243.52px;
-  height: 50px;
-  margin: auto;
-  margin-left: 40px;
-}
+
 #social-media{
   position: relative;
   display: flex;
   flex-direction: row;
-  margin: auto;
-  margin-right: 0;
   font-size: 40px;
 }
 #social-media a{
@@ -183,17 +241,17 @@ h1{
 #gp-logo{
   color: var(--googleplus);
 }
+
+/****************/
 #majorMenu{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-  flex-wrap: wrap;
-}
-#majorMenu-container{
+  width: 100%;
   background: var(--darkBlue);
-  border-top: 3px solid var(--easyWhite);
+  border-top: 2px solid var(--easyWhite);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
+
 .majorMenu-item{
   display: flex;
   flex-direction: column;
@@ -202,113 +260,68 @@ h1{
   text-decoration: none;
   color: var(--easyWhite);
   transition: .3s;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
 }
 .majorMenu-icon{
-  margin: auto;
-  padding: 20px 22px;
   font-size: 32px;
-  border: 5px solid var(--easyWhite);
-  border-radius: 50px;
+  width: 82px;
+  height: 82px;
   transition: .3s;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 5px;
 }
-.majorMenu-item:hover .majorMenu-icon{
-  color: var(--darkBlue);
-}
-.majorMenu-item:hover .majorMenu-icon{
-  background: var(--easyWhite);
-}
-.majorMenu-link{
-  margin: auto;
-  margin-top: 5px;
-  text-transform: uppercase;
-  font-family: RobotoMedium;
-  font-size: 20px;
-}
-#majorMenu-coursesIcon{
-  padding-left: 22px;
-  padding-right: 22px;
-}
-#majorMenu-edupageIcon{
-  padding-left: 16px;
-  padding-right: 16px;
-}
-#majorMenu-lunchIcon{
-  padding-left: 23px;
-  padding-right: 23px;
-}
-#majorMenu-mailIcon{
-  padding-left: 20px;
-  padding-right: 20px;
-}
-#majorMenu-cloudIcon{
-  padding-left: 16px;
-  padding-right: 16px;
-}
-#majorMenu-scheludeIcon{
-  padding-left: 20px;
-  padding-right: 20px;
-}
-#majorMenu-moodleIcon{
-  padding-left: 22px;
-  padding-right: 22px;
-}
-#majorMenu-blogIcon{
-  padding-left: 18px;
-  padding-right: 18px;
-}
-.majorMenu-contactIcons{
+.majorMenu-icon::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  margin: auto;
-  width: 44px;
-  font-size: 26px;
-  padding: 15px 14px;
+  align-items: center;
+  box-sizing: border-box;
+  position: absolute;
   border: 5px solid var(--easyWhite);
-  border-radius: 50px;
+  border-radius: inherit;
 }
-.majorMenu-contactIcons:hover{
-  background: var(--easyWhite);
-  transition: .3s;
+
+.majorMenu-icon .contact-icons{
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
-.majorMenu-contactIcons:hover i{
+
+.majorMenu-item:hover .majorMenu-icon{
   color: var(--darkBlue);
-  transition: .3s;
+  background: var(--easyWhite);
 }
-#majorMenu-addressIcon{
-  margin-bottom: 16px;
-}
-#majorMenu-phoneIcon{
-  margin-top: 16px;
-}
-#minorMenu-container{
-  background: var(--lightBlue);
-}
+
+/****************/
 #minorMenu{
+  background: var(--pblue);
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: auto;
   flex-wrap: wrap;
 }
-.minorMenu-item{
+#minorMenu a{
   color: var(--easyWhite);
-  margin: 5px 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: nowrap;
-}
-.minorMenu-text{
+  padding: 5px 30px;
+  text-decoration: none;
   font-size: 18px;
-  font-family: Roboto;
   text-transform: uppercase;
 }
-.minorMenu-icon{
-  font-size: 15px;
-  margin: auto;
-  margin-left: 3px;
-}
+
+
+/****************/
 #page-content{
   background: var(--darkBlue);
   display: flex;
@@ -316,13 +329,16 @@ h1{
 }
 .partHeadline{
   margin: auto;
-  font-family: RobotoMedium;
+  font-family: Roboto;
+  font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
   color: var(--easyWhite);
   width: 100%;
   border-bottom: 5px solid var(--easyWhite);
+
 }
+/****************/
 #coursesGraduation-container{
   max-width: 1700px;
   min-width: 280px;
@@ -360,7 +376,8 @@ h1{
 }
 .course-name{
   color: var(--easyWhite);
-  font-family: RobotoBold;
+  font-family: Roboto;
+  font-weight: 900;
   font-size: 20px;
   max-width: 190px;
   text-transform: uppercase;
@@ -480,6 +497,8 @@ h1{
   height: 120px;
   margin: auto 50px;
 }
+
+/****************/
 article{
   background-color: var(--contentBlue);
   margin: 15px auto;
@@ -503,7 +522,8 @@ article{
   border-bottom: 2px solid var(--easyWhite);
 }
 .article-headline{
-  font-family: RobotoMedium;
+  font-family: Roboto;
+  font-weight: 700;
   font-size: 24px;
   margin: auto;
   margin-left: 0;
@@ -523,6 +543,8 @@ article{
   color: var(--linkBlue);
   text-decoration: underline;
 }
+
+/****************/
 #competitions-container{
   max-width: 400px;
   margin: 10px 0 10px auto;
@@ -546,6 +568,8 @@ article{
   color: var(--easyWhite);
   opacity: .25;
 }
+
+/****************/
 #schoolProjects-container{
   max-width: 1700px;
   margin: 10px auto 35px auto;
@@ -583,9 +607,4 @@ article{
   height: 98px;
   margin: 16px 25px;
 }
-#background{
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-}
+
