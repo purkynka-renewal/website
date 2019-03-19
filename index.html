@@ -3,41 +3,58 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>SSP Brno</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <title>SSP Brno</title>
   </head>
   <body>
     <header id="header">
-      <nav id="mainnav">
-        <div id="nav-brand">
-          <img src="img/spseit_sbw.png" id="main-logo">
-          <p>SPŠ Brno, Purkyňova, p. o.</p>
-        </div>
-        
-        <ul class="nav">
-          <li><a href="" class="headerMenu-item"><i class="fas fa-user-graduate"></i>Obory</a></li>
-          <li><a href="" class="headerMenu-item"><i class="far fa-newspaper"></i>Články</a></li>
-          <li><a href="" class="headerMenu-item"><i class="fas fa-file-alt"></i>Dokumenty</a></li>
-          <li><a href="" class="headerMenu-item"><div class="contact-icons"><i class="fas fa-map-marker-alt"></i><i class="fas fa-phone"></i></div></i>Kontakty</a></li>
-        </ul>
-      </nav>
+      <div id="mainnav-wrap">
+        <nav id="mainnav">
+          <button class="navbar-toggler" data-toggle="#nav-wrap">
+            <i class="fas fa-bars"></i> <h1 class="d-none">Menu</h1>
+          </button>
+                
+          <div id="nav-brand">
+            <img src="img/spseit_sbw.png" id="main-logo">
+            <p>SPŠ Brno, Purkyňova, p. o.</p>
+          </div>
+          
+          <ul class="nav">
+            <li><a href="" class="headerMenu-item"><i class="fas fa-user-graduate"></i>Obory</a></li>
+            <li><a href="" class="headerMenu-item"><i class="far fa-newspaper"></i>Články</a></li>
+            <li><a href="" class="headerMenu-item"><i class="fas fa-file-alt"></i>Dokumenty</a></li>
+            <li><a href="" class="headerMenu-item"><div class="contact-icons"><i class="fas fa-map-marker-alt"></i><i class="fas fa-phone"></i></div></i>Kontakty</a></li>
+          </ul>
+        </nav>
+      </div>
+      <script src="js/navbar.js" defer></script>
       
-      <aside id="mainInfo">
+      <div id="mainInfo">
         <span>28. února 2019</span>
         <span>Svátek má Lumír</span>
         <span>Týden A</span>
-      </aside>
+      </div>
       
       <div id="mainHeadline">
         <img src="img/bg.jpg" id="headline-background">
+        
         <div id="mainHeadline-text">
           <h1>Střední průmyslová škola Brno, Purkyňova</h1>
           <p>Purkyňova 97, 612 00 Brno</p>
         </div>
         <img id="mainHeadline-logo" src="img/spseit.png">
+        
+        <div id="mainHeadline-scrolldown">
+          <i class="fas fa-angle-down"></i>
+          <noscript>
+              <p> Please enable JavaScript </p>
+          </noscript>
+        </div>
       </div>
+      <script src="js/welcome.js" defer></script>
       
       <div id="bottomHeader-content">
         <div id="grants">
@@ -53,7 +70,8 @@
       </div>
     </header>
     
-    <div id="majorMenu">
+    <nav id="majorMenu">
+      <h1 class="d-none">Velké menu</h1>
       <a href="" class="majorMenu-item"><i class="fas fa-user-graduate majorMenu-icon"></i><span>Obory</span></a>
       <a href="" class="majorMenu-item"><i class="fas fa-graduation-cap majorMenu-icon"></i><span>Edupage</span></a>
       <a href="" class="majorMenu-item"><i class="fas fa-utensils majorMenu-icon"></i><span>Obědy</span></a>
@@ -63,9 +81,10 @@
       <a href="" class="majorMenu-item"><i class="fas fa-atlas majorMenu-icon"></i><span>Moodle</span></a>
       <a href="" class="majorMenu-item"><i class="far fa-newspaper majorMenu-icon"></i><span>Články</span></a>
       <a href="" class="majorMenu-item"><div class="majorMenu-icon"><div class="contact-icons"><i class="fas fa-map-marker-alt"></i><i class="fas fa-phone"></i></div></div><span>Kontakty</span></a>
-    </div>
+    </nav>
     
     <nav id="minorMenu">
+      <h1 class="d-none">Malé menu</h1>
       <a href="#" class="minorMenu-item dropdown-toggle">Škola</a>
       <a href="#" class="minorMenu-item dropdown-toggle">Přijímací řízení</a>
       <a href="#" class="minorMenu-item dropdown-toggle">Dokumenty</a>
@@ -74,8 +93,8 @@
     </nav>
     
     <div id="page-content">
-      <div id="coursesGraduation-container">
-        <p class="partHeadline">Maturitní obory</p>
+      <section id="coursesGraduation-container">
+        <h2 class="partHeadline">Maturitní obory</h2>
         <div id="courses-graduation">
           <a href="" class="course-info" id="course-IT"><i class="fas fa-desktop course-icon"></i><p class="course-name">Informační technologie</p><p class="course-number">18-20-M/01</p></a>
           <a href="" class="course-info" id="course-E"><i class="far fa-lightbulb course-icon"></i><p class="course-name">Elektrotechnika</p><p class="course-number">26-41-M/01</p></a>
@@ -84,31 +103,31 @@
           <a href="" class="course-info" id="course-SC"><i class="fas fa-hands-helping course-icon"></i><p class="course-name">Sociální činnost</p><p class="course-number">76-41-M/01</p></a>
           <a href="" class="course-info" id="course-PE"><i class="fas fa-leaf course-icon"></i><p class="course-name">Průmyslová ekologie</p><p class="course-number">16-02-M/01</p></a>
         </div>
-      </div>
+      </section>
       <div class="flex-container">
-        <div id="coursesLearning-container">
-          <p class="partHeadline">Učební obory</p>
+        <section id="coursesLearning-container">
+          <h2 class="partHeadline">Učební obory</h2>
           <div id="courses-learning">
             <a href="" class="course-info" id="course-El"><i class="fas fa-bolt course-icon"></i><p class="course-name">Elektrikář</p><p class="course-number">36-51-H/01</p></a>
             <a href="" class="course-info" id="course-M"><i class="fas fa-memory course-icon"></i><p class="course-name">Mechanik pro zařízení a přístroje</p><p class="course-number">26-52-H/01</p></a>
           </div>
-        </div>
-        <div id="examsInfo-container">
-          <p class="partHeadline">Informace o přijímacích zkouškách</p>
+        </section>
+        <section id="examsInfo-container">
+          <h2 class="partHeadline">Informace o přijímacích zkouškách</h2>
           <div id="exams-info">
             <p class="exams-article">Pro žáky ZŠ jsme letos nově připravili PŘIJÍMAČKY NANEČISTO. Tato akce je dvoudenní:<br><br> 23. března 2019 od 9:00 do 11:30 hod. proběhne vypracování testu (1 hodina matematiky, 1 hodina českého jazyka)<br><br>30. března 2019 od 9:00 do 11:30 hod. proběhne vyhodnocení testu (1 hodina matematiky, 1 hodina českého jazyka)</p>
             <p class="exams-article">Ředitel školy vyhlašuje 1. kolo přijímacího řízení do 1. ročníku vzdělávání na Střední průmyslové škole Brno, Purkyňova, příspěvková organizace pro školní rok 2019/2020. Všechny podrobnosti - počty přijímaných žáků v jednotlivých oborech, kritéria hodnocení a termíny přijímacích zkoušek naleznete v dokumentech, které jsou vystaveny na elektronické úřední desce školy - <a href="" class="weblink">ZDE</a>. </p>
           </div>
-        </div>
+        </section>
       </div>
       <div class="flex-container">
-        <div id="articles-container">
-          <p class="partHeadline">Nejnovější články</p>
+        <section id="articles-container">
+          <h2 class="partHeadline">Nejnovější články</h2>
           <article>
             <img class="article-picture" src="img/articles-gallery/post1/tv_03.jpg">
             <div class="article-content">
               <div class="article-head">
-                <p class="article-headline">Purkiáda 2019 - slavnostní vyhlášení</p>
+                <h3 class="article-headline">Purkiáda 2019 - slavnostní vyhlášení</h3>
                 <p class="article-date">27. února 2019</p>
               </div>
               <p class="article-text">Ve čtvrtek 7. 2. 2019 proběhlo slavnostní vyhlášení soutěže. 10 nejúspěšnějších řešitelů soutěže se sešlo s našimi studenty - autory úloh a organizátory soutěže. Pan ředitel naší školy Ing. Antonín Doušek, Ph.D. předal výhercům diplomy a věcné ceny. Následovalo malé posezení výherců s organizátory soutěže, probíraly se jednotlivé soutěžní příklady i možnosti studia na naší škole. Ještě jednou díky všem autorům úloh a organizátorům z řad našich studentů. Jména vítězů... <a href="" class="article-readMore">Číst více</a></p>
@@ -118,31 +137,31 @@
             <img class="article-defaultImage" src="img/spseit.png">
             <div class="article-content">
               <div class="article-head">
-                <p class="article-headline">Purkiáda 2019 - slavnostní vyhlášení</p>
+                <h3 class="article-headline">Purkiáda 2019 - slavnostní vyhlášení</h3>
                 <p class="article-date">27. února 2019</p>
               </div>
               <p class="article-text">Ve čtvrtek 7. 2. 2019 proběhlo slavnostní vyhlášení soutěže. 10 nejúspěšnějších řešitelů soutěže se sešlo s našimi studenty - autory úloh a organizátory soutěže. Pan ředitel naší školy Ing. Antonín Doušek, Ph.D. předal výhercům diplomy a věcné ceny. Následovalo malé posezení výherců s organizátory soutěže, probíraly se jednotlivé soutěžní příklady i možnosti studia na naší škole. Ještě jednou díky všem autorům úloh a organizátorům z řad našich studentů. Jména vítězů... <a class="article-readMore" href="">Číst více</a></p>
           </article>
-        </div>
-        <div id="competitions-container">
-          <p class="partHeadline">Soutěže pro žáky</p>
+        </section>
+        <section id="competitions-container">
+          <h2 class="partHeadline">Soutěže pro žáky</h2>
           <div id="competitions">
             <p class="competitions-text">Stalo se již dobrou tradicí, že na podzim vyhlašujeme soutěže pro žáky základních škol. Svoje literární schopnosti můžete ukázat v soutěži "TAJEMNÁ ZÁKOUTÍ MORAVY",  - podrobnosti ZDE.</p>
             <hr class="competitions-line">
             <p class="competitions-text">Tradičně také letos pořádáme IT soutěž pro žáky 9. tříd - PURKIÁDA 2019 - podrobnosti ZDE, ve které budete řešit úkoly zaměřené na logické a kreativní myšlení. Nejlepší řešitelé získají hodnotné ceny.</p>
           </div>
-        </div>
+        </section>
       </div>
-      <div id="schoolProjects-container">
-        <p class="partHeadline">Projekty školy</p>
-        <div id="school-projects">
-          <a href=""><img id="erasmus-logo" src="img/projects/erasmus+.png"></a>
-          <a href=""><img id="ropjv-logo" src="img/projects/ropjv_w.png"></a>
-          <a href=""><img id="cez-logo" src="img/projects/cez.jpg"></a>
-          <a href=""><img id="cr-logo" src="img/projects/ceske_rucicky.png"></a>
-          <a href=""><img id="etwinning-logo" src="img/projects/etwinning_bw.png"></a>
-        </div>
-      </div>
+      <section id="schoolProjects-container">
+        <h2 class="partHeadline">Projekty školy</h2>
+        <ul id="school-projects" class="list-nostyle">
+          <li><a href=""><img id="erasmus-logo" alt="<!--DOPLNITALT:<-->" src="img/projects/erasmus+.png"></a></li>
+          <li><a href=""><img id="ropjv-logo" src="img/projects/ropjv_w.png"></a></li>
+          <li><a href=""><img id="cez-logo" src="img/projects/cez.jpg"></a></li>
+          <li><a href=""><img id="cr-logo" src="img/projects/ceske_rucicky.png"></a></li>
+          <li><a href=""><img id="etwinning-logo" src="img/projects/etwinning_bw.png"></a></li>
+        </ul>
+      </section>
     </div>
   </body>
 </html>
