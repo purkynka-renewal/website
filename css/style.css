@@ -723,7 +723,7 @@ nav#mainnav .nav > li > a:hover{
 
 .article-content{
   color: var(--easyWhite);
-  margin-left: 240px;
+  margin-left: 260px;
 }
 
 .article-head{
@@ -735,7 +735,7 @@ nav#mainnav .nav > li > a:hover{
   position: relative;
 }
 
-.article-picture, .article-defaultImage{
+.article-image{
   width: 240px;
   height: auto;
   border: 2px solid var(--easyWhite);
@@ -783,7 +783,7 @@ nav#mainnav .nav > li > a:hover{
   .article-headline{
     margin-bottom: 8px;
   }
-  .article-picture, .article-defaultImage{
+  .article-image, .article-defaultImage{
     width: auto;
     height: 160px;
     left: 50%;
