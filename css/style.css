@@ -71,6 +71,10 @@ body{
 .list-nostyle{
     list-style-type: none;
 }
+.weblink{
+  color: var(--linkBlue);
+  text-decoration: underline;
+}
 
 /****************/
 header#header{
@@ -297,6 +301,10 @@ nav#mainnav .nav > li > a:hover{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .majorMenu-item{
@@ -307,20 +315,16 @@ nav#mainnav .nav > li > a:hover{
   text-decoration: none;
   color: var(--easyWhite);
   transition: .3s;
-  text-transform: uppercase;
-  font-family: Roboto;
-  font-weight: 700;
-  font-size: 20px;
   text-align: center;
 }
 .majorMenu-icon{
-  font-size: 32px;
-  width: 82px;
-  height: 82px;
+  font-size: 28px;
+  width: 72px;
+  height: 72px;
   transition: .3s;
   border-radius: 50%;
   position: relative;
-  margin-bottom: 5px;
+  margin: 0 auto 8px;
 }
 .majorMenu-icon::before{
   content: "";
@@ -333,7 +337,7 @@ nav#mainnav .nav > li > a:hover{
   align-items: center;
   box-sizing: border-box;
   position: absolute;
-  border: 5px solid var(--easyWhite);
+  border: 2px solid var(--easyWhite);
   border-radius: inherit;
 }
 
@@ -376,24 +380,27 @@ nav#mainnav .nav > li > a:hover{
   background: var(--darkBlue);
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#page-content > *{
+  max-width: 1700px;
 }
 .partHeadline{
-  margin: auto;
-  font-family: Roboto;
-  font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
   color: var(--easyWhite);
   width: 100%;
-  border-bottom: 5px solid var(--easyWhite);
+  border-bottom: 4px solid var(--easyWhite);
 
 }
 /****************/
 #coursesGraduation-container{
   max-width: 1700px;
   min-width: 280px;
-  margin: 25px auto;
+  margin: 25px 0;
 }
+
 #courses-graduation{
  background-color: var(--contentBlue);
  display: flex;
@@ -526,68 +533,60 @@ nav#mainnav .nav > li > a:hover{
 }
 .flex-container{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  min-width: 1700px;
-  margin: auto;
-}
-.weblink{
-  color: var(--linkBlue);
-  text-decoration: underline;
-}
-.article-picture{
-  width: 240px;
-  height: 160px;
-  margin: auto;
-  border: 2px solid var(--easyWhite);
-}
-.article-defaultImage{
-  width: 141px;
-  height: 120px;
-  margin: auto 50px;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
 }
 
+
 /****************/
-#articles-container article{
-  background-color: var(--contentBlue);
-  margin: 15px auto;
-  padding: 30px 35px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
+
 #articles-container{
   max-width: 1200px;
-  margin: auto;
-  margin-left: 0;
 }
+
+#articles-container article{
+  background-color: var(--contentBlue);
+  margin: 15px 0;
+  padding: 30px 35px;
+  display: flex;
+}
+
+.article-picture, .article-defaultImage{
+  width: 240px;
+  height: auto;
+  border: 2px solid var(--easyWhite);
+  flex-shrink: 0;
+}
+.article-defaultImage{
+  border: 0;
+  padding: 0 25px;
+}
+
 .article-content{
   color: var(--easyWhite);
   margin-left: 30px;
 }
+
 .article-head{
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
   border-bottom: 2px solid var(--easyWhite);
+  margin-bottom: 8px;
 }
+
 .article-headline{
-  font-family: Roboto;
-  font-weight: 700;
   font-size: 24px;
-  margin: auto;
-  margin-left: 0;
 }
+
 .article-date{
-  font-family: Roboto;
   font-size: 18px;
-  margin: auto;
-  margin-right: 0;
 }
+
 .article-text{
-  font-family: Roboto;
   font-size: 18px;
-  max-width: 800px;
+  text-align: justify;
 }
 .article-readMore{
   color: var(--linkBlue);
@@ -597,7 +596,6 @@ nav#mainnav .nav > li > a:hover{
 /****************/
 #competitions-container{
   max-width: 400px;
-  margin: 10px 0 10px auto;
 }
 #competitions{
   display: flex;
