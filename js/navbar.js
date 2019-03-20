@@ -22,8 +22,8 @@ $(window).click((e) => {
 
 // Make sure we have background after opening dropdown
 function dropdown_callback(){
-    if($(this).parents("#navbar").length === 1){
-        $("#navbar").toggleClass("expanded", $(this).is(":visible"));
+    if($(this).parents("#mainnav").length === 1){
+        $("#mainnav").toggleClass("droppeddown", $(this).is(":visible"));
         console.log($(this).is(":visible"))
     }
 }
@@ -36,8 +36,8 @@ $(".navbar-toggler").click((e) => {
     
     menu.slideToggle(() => { 
         // Make sure we have background after opening menu     
-        if(menu.parents("#navbar").length == 1){
-            $("#navbar").toggleClass("expanded", menu.is(":visible"));
+        if(menu.parents("#mainnav").length == 1){
+            $("#mainnav").toggleClass("expanded", menu.is(":visible"));
         }
     });
 });

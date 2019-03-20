@@ -17,26 +17,28 @@
             <i class="fas fa-bars"></i> <h2 class="d-none">Menu</h2>
           </button>
                 
-          <div id="nav-brand">
+          <a href="#" id="nav-brand">
             <img src="img/spseit_sbw.png" id="main-logo">
             <p>SPŠ Brno, Purkyňova, p. o.</p>
-          </div>
+          </a>
           
-          <ul class="nav">
-            <li><a href="" class="headerMenu-item"><i class="fas fa-user-graduate"></i>Obory</a></li>
-            <li><a href="" class="headerMenu-item"><i class="far fa-newspaper"></i>Články</a></li>
-            <li><a href="" class="headerMenu-item"><i class="fas fa-file-alt"></i>Dokumenty</a></li>
-            <li><a href="" class="headerMenu-item"><div class="contact-icons"><i class="fas fa-map-marker-alt"></i><i class="fas fa-phone"></i></div>Kontakty</a></li>
-          </ul>
+          <div id="nav-wrap">
+            <ul class="nav">
+              <li><a href="" class="headerMenu-item"><i class="fas fa-user-graduate"></i>Obory</a></li>
+              <li><a href="" class="headerMenu-item"><i class="far fa-newspaper"></i>Články</a></li>
+              <li><a href="" class="headerMenu-item"><i class="fas fa-file-alt"></i>Dokumenty</a></li>
+              <li><a href="" class="headerMenu-item"><div class="contact-icons"><i class="fas fa-map-marker-alt"></i><i class="fas fa-phone"></i></div>Kontakty</a></li>
+            </ul>
+          </div>
         </nav>
+        <div id="mainInfo">
+          <span>28. února 2019</span>
+          <span>Svátek má Lumír</span>
+          <span>Týden A</span>
+        </div>
       </div>
       <script src="js/navbar.js" defer></script>
       
-      <div id="mainInfo">
-        <span>28. února 2019</span>
-        <span>Svátek má Lumír</span>
-        <span>Týden A</span>
-      </div>
       
       <div id="mainHeadline">
         <img src="img/bg.jpg" id="headline-background">
@@ -47,12 +49,11 @@
         </div>
         <img id="mainHeadline-logo" src="img/spseit.png">
         
-        <div id="mainHeadline-scrolldown">
-          <i class="fas fa-angle-down"></i>
-          <noscript>
-              <p> Please enable JavaScript </p>
-          </noscript>
-        </div>
+        <noscript>
+          <div id="mainHeadline-scrolldown">
+            <p>Prosím, povolte JavaScript./Please enable JavaScript.</p>
+          </div>
+        </noscript>
       </div>
       <script src="js/welcome.js" defer></script>
       
@@ -72,24 +73,28 @@
     
     <nav id="majorMenu">
       <h2 class="d-none">Velké menu</h2>
-      <a href="" class="majorMenu-item"><i class="fas fa-user-graduate majorMenu-icon"></i><span>Obory</span></a>
-      <a href="" class="majorMenu-item"><i class="fas fa-graduation-cap majorMenu-icon"></i><span>Edupage</span></a>
-      <a href="" class="majorMenu-item"><i class="fas fa-utensils majorMenu-icon"></i><span>Obědy</span></a>
-      <a href="" class="majorMenu-item"><i class="fas fa-envelope majorMenu-icon"></i><span>Mail</span></a>
-      <a href="" class="majorMenu-item"><i class="fas fa-cloud majorMenu-icon"></i><span>Cloud</span></a>
-      <a href="" class="majorMenu-item"><i class="fas fa-clock majorMenu-icon"></i><span>Rozvrhy</span></a>
-      <a href="" class="majorMenu-item"><i class="fas fa-atlas majorMenu-icon"></i><span>Moodle</span></a>
-      <a href="" class="majorMenu-item"><i class="far fa-newspaper majorMenu-icon"></i><span>Články</span></a>
-      <a href="" class="majorMenu-item"><div class="majorMenu-icon majorMenu-icon-stack"><div class="contact-icons"><i class="fas fa-map-marker-alt"></i><i class="fas fa-phone"></i></div></div><span>Kontakty</span></a>
+      <ul class="nav list-nostyle">
+        <li><a href="" class="majorMenu-item"><i class="fas fa-user-graduate majorMenu-icon"></i>Obory</a></li>
+        <li><a href="" class="majorMenu-item"><i class="fas fa-graduation-cap majorMenu-icon"></i>Edupage</a></li>
+        <li><a href="" class="majorMenu-item"><i class="fas fa-utensils majorMenu-icon"></i>Obědy</a></li>
+        <li><a href="" class="majorMenu-item"><i class="fas fa-envelope majorMenu-icon"></i>Mail</a></li>
+        <li><a href="" class="majorMenu-item"><i class="fas fa-cloud majorMenu-icon"></i>Cloud</a></li>
+        <li><a href="" class="majorMenu-item"><i class="fas fa-clock majorMenu-icon"></i>Rozvrhy</a></li>
+        <li><a href="" class="majorMenu-item"><i class="fas fa-atlas majorMenu-icon"></i>Moodle</a></li>
+        <li><a href="" class="majorMenu-item"><i class="far fa-newspaper majorMenu-icon"></i>Články</a></li>
+        <li><a href="" class="majorMenu-item"><div class="majorMenu-icon majorMenu-icon-stack"><div class="contact-icons"><i class="fas fa-map-marker-alt"></i><i class="fas fa-phone"></i></div></div>Kontakty</a></li>
+      </ul>
     </nav>
     
     <nav id="minorMenu">
       <h2 class="d-none">Malé menu</h2>
-      <a href="#" class="minorMenu-item dropdown-toggle">Škola</a>
-      <a href="#" class="minorMenu-item dropdown-toggle">Přijímací řízení</a>
-      <a href="#" class="minorMenu-item dropdown-toggle">Dokumenty</a>
-      <a href="#" class="minorMenu-item dropdown-toggle">Návody pro rodiče a žáky</a>
-      <a href="#" class="minorMenu-item dropdown-toggle">Ostatní služby</a>
+      <ul class="nav list-nostyle">
+        <li><a href="#" class="minorMenu-item dropdown-toggle">Škola</a></li>
+        <li><a href="#" class="minorMenu-item dropdown-toggle">Přijímací řízení</a></li>
+        <li><a href="#" class="minorMenu-item dropdown-toggle">Dokumenty</a></li>
+        <li><a href="#" class="minorMenu-item dropdown-toggle">Návody pro rodiče a žáky</a></li>
+        <li><a href="#" class="minorMenu-item dropdown-toggle">Ostatní služby</a></li>
+      </ul>
     </nav>
     
     <div id="page-content">
@@ -124,9 +129,9 @@
         <section id="articles-container">
           <h2 class="partHeadline">Nejnovější články</h2>
           <article>
-            <img class="article-picture" src="img/articles-gallery/post1/tv_03.jpg">
             <div class="article-content">
               <div class="article-head">
+                <img class="article-picture" src="img/articles-gallery/post1/tv_03.jpg">
                 <h3 class="article-headline">Purkiáda 2019 - slavnostní vyhlášení</h3>
                 <p class="article-date">27. února 2019</p>
               </div>
@@ -134,21 +139,21 @@
             </div>
           </article>
           <article>
-            <img class="article-defaultImage" src="img/spseit.png">
             <div class="article-content">
               <div class="article-head">
+                <img class="article-defaultImage" src="img/spseit.png">
                 <h3 class="article-headline">Purkiáda 2019 - slavnostní vyhlášení</h3>
                 <p class="article-date">27. února 2019</p>
               </div>
               <p class="article-text">Ve čtvrtek 7. 2. 2019 proběhlo slavnostní vyhlášení soutěže. 10 nejúspěšnějších řešitelů soutěže se sešlo s našimi studenty - autory úloh a organizátory soutěže. Pan ředitel naší školy Ing. Antonín Doušek, Ph.D. předal výhercům diplomy a věcné ceny. Následovalo malé posezení výherců s organizátory soutěže, probíraly se jednotlivé soutěžní příklady i možnosti studia na naší škole. Ještě jednou díky všem autorům úloh a organizátorům z řad našich studentů. Jména vítězů... <a class="article-readMore" href="">Číst více</a></p>
           </article>
         </section>
-        <section id="competitions-container">
+        <section id="sidebar-container">
           <h2 class="partHeadline">Soutěže pro žáky</h2>
-          <div id="competitions">
-            <p class="competitions-text">Stalo se již dobrou tradicí, že na podzim vyhlašujeme soutěže pro žáky základních škol. Svoje literární schopnosti můžete ukázat v soutěži "TAJEMNÁ ZÁKOUTÍ MORAVY",  - podrobnosti ZDE.</p>
-            <hr class="competitions-line">
-            <p class="competitions-text">Tradičně také letos pořádáme IT soutěž pro žáky 9. tříd - PURKIÁDA 2019 - podrobnosti ZDE, ve které budete řešit úkoly zaměřené na logické a kreativní myšlení. Nejlepší řešitelé získají hodnotné ceny.</p>
+          <div id="sidebar">
+            <p class="sidebar-text">Stalo se již dobrou tradicí, že na podzim vyhlašujeme soutěže pro žáky základních škol. Svoje literární schopnosti můžete ukázat v soutěži "TAJEMNÁ ZÁKOUTÍ MORAVY",  - podrobnosti ZDE.</p>
+            <hr class="sidebar-line">
+            <p class="sidebar-text">Tradičně také letos pořádáme IT soutěž pro žáky 9. tříd - PURKIÁDA 2019 - podrobnosti ZDE, ve které budete řešit úkoly zaměřené na logické a kreativní myšlení. Nejlepší řešitelé získají hodnotné ceny.</p>
           </div>
         </section>
       </div>
